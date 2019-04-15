@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<!--
+* CoreUI - Pro Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+  <head>
+    <title> <%= title %></title>
+    <% include ../partials/head %>
+    <% include ../partials/script %>
+  <script>
+  (function() {  // khai bao function
+    'use strict'; // toan bo doan code ben duoi se duoc quan ly nghiem ngat hon ve cu phap
+    //khi load trang thi ham chay su theo su kien function se duoc chay theo
+    window.addEventListener('load', function() { 
+      // lay tat ca cac phan tu co trong class needs-validation luu trong mang forms
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loc ra cac phan tu thoa man dieu kien trong mang forms
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        //khi mot su kien submit duoc goi thi ham duoc chay
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            //ngan can trinh duyet thuc thi yeu cau cua nguoi dung
+            event.preventDefault(); 
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>    
+  </head>
+
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <% include ../partials/header %>
+    <div class="app-body"> 
+      <% include ../partials/sidebar %> 
+      <main class="main">
+        <% include ../partials/breadcrumb %>  
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+          <form class="needs-validation" novalidate>
+          <div class="form-group">
+              <input class="form-control"  required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+
+          </div>
+        </div>
+      </main>
+      <% include ../partials/aside %> 
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

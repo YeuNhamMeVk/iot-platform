@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Pro Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <title> <%= title %></title>
+    <% include ../partials/head %>
+    <% include ../partials/script %>
+  </head>
+  <body class="app flex-row align-items-center">
+ 
+  </body>
+</html>

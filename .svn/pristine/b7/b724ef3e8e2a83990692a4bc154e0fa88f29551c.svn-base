@@ -1,0 +1,98 @@
+<!DOCTYPE html>  
+<!--
+* CoreUI - Pro Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+  <head>
+    <title> <%= title %></title>
+    <% include ../partials/head %>
+    <% include ../partials/script %>
+    <style type="text/css">
+    .grid-stack {
+      background: lightgoldenrodyellow;
+    }
+
+    .grid-stack-item-content {
+      color: #2c3e50;
+      text-align: center;
+      background-color: #18bc9c;
+    }
+  </style>
+  </head>
+
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <% include ../partials/header %>
+    <div class="app-body"> 
+      <% include ../partials/sidebar %> 
+      <main class="main">
+        <% include ../partials/breadcrumb %>   
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+          <div class="grid-stack">
+          </div>
+          <script type="text/javascript">
+          $('body').on('click', '.remove', function (e) {
+            e.preventDefault();
+            var grid = $('.grid-stack').data('gridstack'),
+                    el = $(this).closest('.grid-stack-item')
+      
+            grid.removeWidget(el);
+          });
+          $(function () {
+            var options = {
+              float: true,
+            };
+            $('.grid-stack').gridstack(options);
+      
+            new function () {
+      
+              this.grid = $('.grid-stack').data('gridstack');
+      
+              this.addNewWidget = function () {
+                var node = {
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 2,
+                  autoPosition: true,
+                  minWidth: 4,
+                  maxWidth: null,
+                  minHeight: 2,
+                  maxHeight: null,
+                  id: null
+                };
+                let el = this.grid.addWidget($('<div><div class="grid-stack-item-content">' +
+                        '<div class="btn-group float-right">\n' +
+                        '                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+                        '                        <i class="icon-settings"></i>\n' +
+                        '                      </button>\n' +
+                        '                      <div class="dropdown-menu dropdown-menu-right">\n' +
+                        '                        <a class="dropdown-item remove" href="#">Remove</a>\n' +
+                        '                        <a class="dropdown-item" href="#">Another action</a>\n' +
+                        '                        <a class="dropdown-item" href="#">Something else here</a>\n' +
+                        '                      </div>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="text-value">9.823</div>\n' +
+                        '                    <div>Members online</div>' +
+                        '<div/><div/>'),
+                        node.x, node.y, node.width, node.height, node.autoPosition, node.minWidth, node.maxWidth, node.minHeight, node.maxHeight, node.id );
+                // el.attr('custom-id', 'id')
+                return false;
+              }.bind(this);
+      
+              $('#add-new-widget').click(this.addNewWidget);
+            };
+          });
+        </script>
+          </div>
+        </div>
+      </main>
+      <% include ../partials/aside %> 
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

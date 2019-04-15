@@ -1,0 +1,17 @@
+<!-- Bootstrap and necessary plugins-->
+<script src="/vendors/jquery/js/jquery.min.js"></script>
+<script src="/vendors/popper.js/js/popper.min.js"></script>
+<script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="/vendors/pace-progress/js/pace.min.js"></script>
+<script src="/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+<script src="/vendors/@coreui/coreui-pro/js/coreui.min.js"></script>
+<!-- Plugins and scripts required by this view-->
+<script src="/vendors/chart.js/js/Chart.min.js"></script>
+<script src="/vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js"></script>
+<script src="/vendors/mustache/js/mustache.min.js"></script>
+<!-- gribstack -->
+<link rel="stylesheet" href="/vendors/gridstack/gridstack.min.css"/>
+<script src="/vendors/jquery-ui/js/jquery-ui.min.js"></script>
+<script src="/vendors/lodash/lodash.min.js"></script>
+<script src="/vendors/gridstack/gridstack.min.js"></script>
+<script src="/vendors/gridstack/gridstack.jQueryUI.min.js"></script>

@@ -1,0 +1,49 @@
+<div class="sidebar">
+  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home">
+          <i class="nav-icon cui-home"></i> <%= __('Home') %>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">
+          <i class="nav-icon icon-speedometer"></i> <%= __('Dashboard') %>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users">
+          <i class="nav-icon fa fa-user"></i> <%= __('Users') %>
+        </a>
+      </li>
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle">
+        <i class="nav-icon fa fa-microchip"></i> <%= __('Devices') %>
+      </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <a class="nav-link" href="/all-devices">
+              <i class="nav-icon fa fa-microchip"></i> All Devices
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add-devices">
+              <i class="nav-icon fa fa-plus"></i> Add Device
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/delete-devices">
+              <i class="nav-icon fa fa-minus"></i> Delete Device
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logs.html">
+          <i class="nav-icon icon-list"></i> Logs
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

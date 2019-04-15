@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<!--
+* CoreUI - Pro Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+  <head>
+    <title> <%= title %></title>
+    <% include ../partials/head %>
+    <% include ../partials/script %>
+    <script type="text/javascript">
+
+$(function() { 
+    $(document).on("change",".uploadFile", function()
+    {
+        var uploadFile = $(this);
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+ 
+        if (/^image/.test( files[0].type)){ // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+ 
+            reader.onloadend = function(){ // set image data as background of div
+                //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
+uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
+            }
+        }
+      
+    });
+});
+    </script>
+    <style >
+.imagePreview {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background:url(https://cdn3.iconfinder.com/data/icons/simple-toolbar/512/add_plus_new_user_green_page_file_up_text-512.png);
+    background-color:#fff;
+    background-size: cover;
+    background-repeat:no-repeat;
+    display: inline-block;
+}
+
+    </style>
+  </head>
+
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <% include ../partials/header %>
+    <div class="app-body"> 
+      <% include ../partials/sidebar %> 
+      <main class="main">
+        <% include ../partials/breadcrumb %>  
+        <div class="container">
+          <div class="animated fadeIn">
+            <h1>All-Devices</h1>
+            <div class="row">
+              <div class="col-sm-2 imgUp">
+                <label class="btn btn-primary imagePreview">
+                  <input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <% include ../partials/aside %> 
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

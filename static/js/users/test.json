@@ -1,0 +1,16 @@
+[
+  {
+    "username": "Hung",
+    "role": "Manager",
+    "admin": true,
+    "manager": true,
+    "developer": true
+  },
+  {
+    "username": "Another Hung",
+    "role": "Normal User",
+    "admin": true,
+    "manager": false,
+    "developer": true
+  }
+]

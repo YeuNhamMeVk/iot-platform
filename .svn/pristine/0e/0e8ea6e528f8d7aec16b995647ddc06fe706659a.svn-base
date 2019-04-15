@@ -1,0 +1,18 @@
+{
+    "user":[
+        {
+            "id": 1,
+            "firstName": "Đinh",
+            "lastName": "Tùng",
+            "email": "viettungdinhvn@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "firstName": "Đỗ",
+            "lastName": "Lâm",
+            "email": "ngoclamdovn@gmail.com",
+            "password": "654321"
+        }
+    ]
+}

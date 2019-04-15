@@ -1,0 +1,109 @@
+<!DOCTYPE html>  
+<!--
+* CoreUI - Pro Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2018 creativeLabs Ĺukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+  <head>
+    <title> <%= title %></title>
+    <% include ../partials/head %>
+    <% include ../partials/script %>
+    <link href="/css/user.css" rel="stylesheet">
+    <% include add-script %>
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <% include ../partials/header %>
+    <div class="app-body"> 
+      <% include ../partials/sidebar %> 
+      <main class="main">
+        <% include ../partials/breadcrumb %>  
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <% include modal %>
+            <div class="row">
+              <!-- COL 1 -->
+              <div class="col col-lg-4 col-sm-6">
+                <div class="card bg-primary" style="height: 11rem;" >
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col col-lg-4 col-sm-6 mt-2"><br>
+                          <img src="/img/users/user-man.jpg" class="img-thumbnail d-md-block" alt="Responsive image" style="height: 5rem; width: 5rem;">
+                      </div>
+                      <div class="col col-lg-8 col-sm-6">
+                          <div class="btn-group float-right">
+                              <button class="btn btn-primary dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="icon-settings"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-137px, 23px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                              </div>
+                          </div>
+                          <br>
+                          <ul class="list-inline font-weight-bold mt-2">
+                              <li class="list-inline-item text-uppercase">ID:</li>
+                              <li class="list-inline-item text-capitalize">SN-001</li>
+                          </ul>
+                          <ul class="list-inline font-weight-bold">
+                              <li class="list-inline-item text-uppercase">Name:</li>
+                              <li class="list-inline-item text-capitalize">Nguyen Van A</li>
+                          </ul>
+                          <ul class="list-inline font-weight-bold ">
+                              <li class="list-inline-item text-uppercase">Role:</li>
+                              <li class="list-inline-item text-capitalize">Admintrastor</li>
+                          </ul>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-4 col-sm-6">
+                <div class="card bg-primary" style="height: 11rem;" >
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col col-lg-4 col-sm-6 mt-2"><br>
+                          <img src="/img/users/user-man.jpg" class="img-thumbnail" alt="Responsive image">
+                      </div>
+                      <div class="col col-lg-8 col-sm-6">
+                          <div class="btn-group float-right">
+                              <button class="btn btn-primary dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="icon-settings"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-137px, 23px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                              </div>
+                          </div>
+                          <br>
+                          <ul class="list-inline font-weight-bold mt-2">
+                              <li class="list-inline-item text-uppercase">ID:</li>
+                              <li class="list-inline-item text-capitalize">SN-001</li>
+                          </ul>
+                          <ul class="list-inline font-weight-bold">
+                              <li class="list-inline-item text-uppercase">Name:</li>
+                              <li class="list-inline-item text-capitalize">Nguyen Van A</li>
+                          </ul>
+                          <ul class="list-inline font-weight-bold">
+                              <li class="list-inline-item text-uppercase">Role:</li>
+                              <li class="list-inline-item text-capitalize">Admintrastor</li>
+                          </ul>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-4 col-sm-6">
+                ádasdas
+              </div>
+            </div>            
+          </div>
+        </div>
+      </main>
+      <% include ../partials/aside %> 
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

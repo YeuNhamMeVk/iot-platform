@@ -1,0 +1,10 @@
+.imagePreview {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-image:url("/img/users/add-user.png");
+    background-color:#fff;
+    background-size: cover;
+    background-repeat:no-repeat;
+    display: inline-block;
+}

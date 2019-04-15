@@ -1,0 +1,45 @@
+<script>
+(function() {  // khai bao function
+  'use strict'; // toan bo doan code ben duoi se duoc quan ly nghiem ngat hon ve cu phap
+  //khi load trang thi ham chay su theo su kien function se duoc chay theo
+  window.addEventListener('load', function() { 
+    // lay tat ca cac phan tu co trong class needs-validation luu trong mang forms
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loc ra cac phan tu thoa man dieu kien trong mang forms
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      //khi mot su kien submit duoc goi thi ham duoc chay
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          //ngan can trinh duyet thuc thi yeu cau cua nguoi dung
+          event.preventDefault(); 
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> 
+<!-- Modal -->
+<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h4 class="text-center font-weight-bold text-muted ml-auto"><i class="icon-user-follow mr-2"></i>CREATE USER</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="needs-validation" novalidate>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-success btn-md">Create New User</button>
+            </div>
+        </div>
+    </div>
+</div>

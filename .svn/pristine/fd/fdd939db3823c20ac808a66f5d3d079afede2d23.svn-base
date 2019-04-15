@@ -1,0 +1,52 @@
+[
+  {
+    "group": "admin",
+    "permissions": [
+      {
+        "resource": "*",
+        "methods": "*",
+        "action": "allow"
+      }
+    ]
+  },
+  {
+    "group": "user",
+    "permissions": [
+      {
+        "resource": "users/",
+        "methods": ["POST", "GET", "PUT"],
+        "action": "allow"
+      },
+      {
+        "resource": "profile/",
+        "methods": ["POST", "GET", "PUT"],
+        "action": "allow"
+      }
+    ]
+  },
+  {
+    "group": "guest",
+    "permissions": [
+      {
+        "resource": "/",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+      },
+      {
+        "resource": "signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+      },
+      {
+        "resource": "login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+      },
+      {
+        "resource": "profile/",
+        "methods": ["POST", "GET", "PUT"],
+        "action": "allow"
+      }
+    ]
+  }
+]

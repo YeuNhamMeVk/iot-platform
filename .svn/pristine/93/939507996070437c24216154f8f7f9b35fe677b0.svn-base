@@ -1,0 +1,57 @@
+<aside class="aside-menu">
+    <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">
+        Tab 1
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">
+        Tab 2
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">
+        Tab 3
+      </a>
+    </li>
+  </ul>
+  <!-- Tab panes-->
+  <div class="tab-content">
+    <div class="tab-pane p-3 active" id="tab1" role="tabpanel">
+      <button type="button">
+        <a class="btn btn-default" id="add-new-widget" href="/Dashboard">Add Widget</a>
+      </button>
+    </div>
+    <div class="tab-pane p-3" id="tab2" role="tabpanel">
+      Tab 2 Content
+    </div>
+    <div class="tab-pane p-3" id="tab3" role="tabpanel">
+      Tab 3 Content
+    </div>
+  </div>
+  </aside>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item m-1">Home</li>
+  <li class="breadcrumb-item m-1">
+    <a href="#">Admin</a>
+  </li>
+  <li class="breadcrumb-item active m-1 ">Dashboard</li>
+  <!-- Breadcrumb Menu-->
+  <li class="breadcrumb-menu "></li>
+  <%if(title === 'LHV IoT - Add User'){ %>
+  <li>
+      <button type="button " class="btn btn-primary" data-toggle="modal" data-target="#signin">
+          Create User
+      </button>
+  </li>
+ <% } %>
+ <%if(title === 'LHV IoT - Dashboard'){ %>
+ <li class="navbar navbar-light">
+ <button class="navbar-toggler aside-menu-toggler" type="button" data-toggle="aside-menu-show">
+ <span class="navbar-toggler-icon"></span>
+</button>
+ </li>
+<% } %>
+</ol>
+
